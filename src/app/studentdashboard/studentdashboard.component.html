@@ -1,0 +1,77 @@
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+        <div class="row">
+            <div class="col-md-3">
+                <a class="anav btn btn-secondary form-control mt-2" routerLink="">Home</a>
+                <a class="anav btn btn-primary form-control mt-2" routerLink="/quiz">Exam</a>question
+
+                <!-- <a class="anav btn btn-secondary form-control mt-2" routerLink="">Result</a> -->
+                <a (click)="viewscore()" type="button" class="anav btn btn-primary form-control" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Result</a>
+                <a class="anav btn btn-warning form-control mt-2" routerLink="/notification">Notifications <span class="badge bg-primary rounded-pill p-1" style="font-size: 20px;"></span></a>
+
+
+                <button (click)="logout()" class="anav btn btn-danger form-control mt-2" routerLink="">Logout</button>
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8 mt-5">
+            <h1 class="text-center text-primary">Welcome <span class="text-warning">{{name}} &nbsp; </span><i class="fa-solid fa-hand fa-shake"></i></h1>
+
+            <h1 class="heading">welcome to <span class="text-primary">Y-learn</span> international school</h1>
+         <h1 class="text-center text-primary" style="font-size: 45px;">Your Course</h1>
+            <h1 class="text-success text-center mt-5">{{course}}</h1>
+            <img [src]="courseimg" alt="courser">
+            <p><strong>{{content}}</strong></p>
+        </div>
+        <div class="col-md-4">
+            <!-- Button trigger modal -->
+<button (click)="viewscore()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    your result
+  </button>
+    
+            <img src="https://edusys.co.in/static/media/Student.bba687987b8af4aa9cdc708367c8df05.svg" alt="image">
+            <img class="logo" src="../../assets/y-LEARN.jpg" alt="logo">
+
+        </div>
+    </div>
+
+</div>
+<div class="container-fluid">
+  <h2 class="text-center text-success">Search & study</h2>
+  <iframe src="https://en.m.wikipedia.org/wiki/School_discipline" frameborder="0"></iframe>
+
+</div>
+
+<!-- body data -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">your results</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+          <h1>Your result is {{score}}  &nbsp; <span id="gradecolor">  {{grade}}</span> </h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="logout()" class="btn btn-primary">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>

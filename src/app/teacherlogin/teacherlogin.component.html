@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded mt-5">
+                <form [formGroup]="loginForm" >
+                    <h2 class="text-center text-primary mt-5">Teacher Login </h2>
+                    <input name="userid" formControlName="userid" type="text" class="form-control mt-5" placeholder="Teacher  Id" required>
+                    <input name="psw" formControlName="psw" type="password" class="form-control mt-5" placeholder="Enter the password" required>
+                    <button (click)="login()" type="button" class="btn btn-warning text-center mt-5" >Login</button>
+                </form>
+            </div>
+            
+        </div>
+        <div class="col-md-6">
+            <img src="https://cdn.dribbble.com/users/3960415/screenshots/8995365/media/b0b5dddc53e15f8eb666502c9c3cb5d4.gif" alt="loginimage">
+        </div>
+    </div>
+</div>

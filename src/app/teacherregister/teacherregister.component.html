@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="register shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <form  [formGroup]="registergroup" >
+            <h1 class="text-center text-primary">Teacher registration</h1>
+        <div class="row">
+            
+       
+            <div class="col-md-6">
+                <img src="https://cdn.dribbble.com/users/2213143/screenshots/7971141/media/184cdea9758c029d9feef05432222403.gif" alt="signup image">
+                
+                    <div class="form-floating mb-3 mt-3">
+                        <input name="userid" formControlName="userid" type="text" class="form-control" id="floatingInput" placeholder="Enter student ID" required>
+                        <label  for="floatingInput">teacher Id</label>
+                      </div>
+                      <div class="form-floating mt-3">
+                        <input name="username" formControlName="username" type="text" class="form-control" id="floatingInput" placeholder="Student name" required>
+                        <label for="floatingPassword">teacher Name</label>
+                      </div>
+                     
+                      
+                      <div class="form-floating mt-3">
+                        <input name="password" formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="enter a password" required>
+                        <label for="floatingPassword">Password </label>
+                      </div>
+                      <div class="form-floating mt-3">
+                        <input name="cpassword"formControlName="cpassword" type="password" class="form-control" id="floatingPassword" placeholder="confirm password" required>
+                        <label for="floatingPassword">Confirm password </label>
+                        <button (click)="register()"  class="btn btn-primary mt-4 form-control">SignUp</button> 
+                        
+
+                       
+                        <div class="col-md-3 mt-3">
+                            <p class="mt-2"><strong>Already registred?</strong></p>
+
+ 
+                            <a routerLink="/teacherlogin" class="btn btn-success form-control">Login</a>
+                        </div>
+
+                      </div>
+                   
+    
+                
+            </div>
+            <div class="col-lg-6">
+               
+                  <div class="form-floating mt-3">
+                    <input name="phone" formControlName="phone" type="text" class="form-control" id="floatingInput" placeholder=" Number" required>
+                    <label for="floatingPassword">phone Number</label>
+                  </div>
+                  <div class="form-floating mt-3">
+                    <input name="image" formControlName="image" type="text" class="form-control" id="floatingInput" placeholder=" image" required>
+                    <label for="floatingPassword">Image Link</label>
+                  </div>
+                  <div class="form-floating mt-3">
+                    <textarea name="address" formControlName="address" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" required></textarea>
+                    <label for="floatingTextarea2">Enter your Adress</label>
+                  </div>
+
+                  <!-- checkbox -->
+                  
+                  <div class="form-check mt-3">
+                    <p><strong>Gender</strong></p>
+                    <input value="male" name="value" formControlName="value" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input value="female" name="value" formControlName="value" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Female
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input value="others" name="value" formControlName="value" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Others
+                    </label>
+                  </div>
+
+                  <label class="mt-4" for="cars">Choose a Course:</label>
+
+                  <select name="course" formControlName="course" id="course" class="form-control mt-2 bg-primary" >
+                    <option value="computerscience">computer science</option>
+                    <option value="biologyscience">Biology science</option>
+                    <option value="commerce">Commerce</option>
+                    <option value="electronics">electronics</option>
+                    <option value="humanities">humanities</option>
+
+
+                  </select>
+                  <img [src]="images" alt="">
+
+              </div>
+
+            
+     
+           
+    
+
+            
+    </div>
+</form>
+   
+</div>

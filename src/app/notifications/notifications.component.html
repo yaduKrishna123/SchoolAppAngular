@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row mt-5" *ngFor="let item of msg">
+<div class="col-md-8 mt-5" >
+
+    <ul class="list-group" >
+        <li class="list-group-item active p-4 text-center" aria-current="true">{{item.message}}</li>
+  
+      </ul>
+</div>
+<div class="col-md-4 mt-5">
+    <ul class="list-group" >
+    <li class="list-group-item active p-4 text-center list-group-item-success" aria-current="true">{{item.date}}</li>
+  
+</ul>
+
+</div>
+    </div>
+</div>

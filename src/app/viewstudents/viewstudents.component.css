@@ -1,0 +1,37 @@
+/* CSS Styling */
+.table {
+    font-size: 20px; /* Set font size */
+  }
+  
+  .table thead th {
+    vertical-align: middle; /* Align th vertically in the middle */
+    background-color: rgb(57, 92, 5);
+    color: white;
+  }
+  
+  .table th,
+  .table td {
+    text-align: center; /* Center align text in th and td */
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f8f9fa; /* Set background color on hover */
+  }
+  
+  .table-bordered {
+    border: 1px solid #dee2e6; /* Set border color */
+  }
+  
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #dee2e6; /* Set border color for th and td */
+  }
+  
+  .table-bordered thead th {
+    border-bottom-width: 2px; /* Set bottom border width for th */
+  }
+  
+  .table-bordered tbody + tbody {
+    border-top-width: 2px; /* Set top border width for tbody */
+  }
+  

@@ -1,0 +1,50 @@
+<div class="comtainer">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <h2 class="text-center text-danger mt-5">Admin Login</h2>
+        <form>
+          <div class="row">
+            <div class="col-md-4">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/879/539/original/cloud-computing-modern-flat-concept-for-web-banner-design-man-enters-password-and-login-to-access-cloud-storage-for-uploading-and-processing-files-illustration-with-isolated-people-scene-free-vector.jpg" alt="loginimg">
+         
+            </div>
+            <div class="col-md-4">
+              <form [formGroup]="adminform">
+                <input
+                type="text"
+                class="mt-5 form-control"
+                placeholder="enter the valid ID "
+                name="userid"
+                formControlName="userid"
+              />
+              <input
+                type="password"
+                class="mt-5 form-control"
+                placeholder="Enter the password"
+                name="psw"
+                formControlName="psw"
+              />
+              <button (click)="login()" type="button" class="btn btn-success form-control" style="margin-top: 20%;">Login</button>
+
+
+
+
+              </form>
+               
+              <p class="mt-5 text-danger"><B>dont have account signup here</B></p>
+              <a routerLink="/adminregister" class="btn btn-warning">signup</a>
+
+
+            </div>
+         
+        
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <img style="height: 700px;" src="https://static.vecteezy.com/system/resources/thumbnails/004/579/026/small_2x/login-account-with-password-and-unlock-security-free-vector.jpg" alt="">
+    </div>
+  </div>
+</div>

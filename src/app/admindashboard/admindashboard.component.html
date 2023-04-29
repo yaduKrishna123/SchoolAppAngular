@@ -1,0 +1,92 @@
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+        <div class="row">
+            <div class="col-md-3" >
+                <button type="button" class="anav btn btn-secondary form-control mt-2 "data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Send notification</button>
+                <a class="anav btn btn-warning form-control mt-2" routerLink="/managemsg">Manage notifications</a>
+
+                <a class="anav btn btn-success form-control mt-2" routerLink="/teacherregister">Add new teacher</a>
+                <a class="anav btn btn-success form-control mt-2" routerLink="/viewteacher">view all teachers</a>
+                <a class="anav btn btn-primary form-control mt-2" routerLink="/viewstudents">view all students</a>
+
+
+                
+                <button (click)="logout()" type="button"  class="anav btn btn-danger form-control mt-2" routerLink="">Logout</button>
+
+
+            </div>
+        </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Send Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="row">
+            <div class="col-md-8">
+                <form [formGroup]="msgform">
+                    <input formControlName="message" name="message" type="text" class="mt-5 form-control" placeholder="enter the notification messages">
+                    <input type="date" formControlName="date" name="date" class="form-control mt-4">
+                    <button (click)="sendmsg()" type="button" class="btn btn-success mt-5">send notification</button>
+                </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../../assets/y-LEARN.jpg" alt="logo">
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center">
+                Main Admin 
+            </h1>adminsvg
+            <img src="https://www.lansweeper.com/wp-content/uploads/2018/11/local-admin-rights.gif" alt="">
+        </div>
+    </div>
+    <h1 class="text-primary">Welcome user</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quasi quae sed ad, fuga corporis pariatur voluptas sint quis eius voluptate explicabo, aliquid error doloribus? Nobis saepe quasi tenetur nemo.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus facilis, velit debitis iste assumenda dolor ullam impedit reiciendis culpa magni quisquam molestias ut voluptas neque, dolorem facere quo, id atque?
+    Amet ut est dolore nostrum nobis quos delectus. Suscipit deleniti eaque fugiat dolorem numquam ducimus explicabo, laboriosam fugit voluptate quis? Quia aut exercitationem suscipit voluptas rerum dolor ea cum quasi.
+    Esse, voluptatum officia architecto aspernatur quis recusandae vel cupiditate rerum laboriosam ex, amet repellendus necessitatibus? Nobis, unde quo? Consequuntur quidem nisi voluptas? Ipsa sint, eligendi corrupti dolorum iste similique cum.
+    Neque officiis rerum ratione porro est esse deleniti beatae incidunt? Velit delectus deleniti nihil numquam vel doloremque quidem, dolorum esse quas veniam deserunt quisquam ratione ipsam, a nemo ducimus quo?</p>
+    <h3 class="text-center mt-5 text-danger">Videos</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <iframe width="1268" height="713" src="https://www.youtube.com/embed/ZeAb5NzbUwE" title="Inside The Most Expensive High Schools In The United States" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6">
+        <iframe width="1268" height="713" src="https://www.youtube.com/embed/7xCe2m0kiSg" title="Why Finland&#39;s schools outperform most others across the developed world | 7.30" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>

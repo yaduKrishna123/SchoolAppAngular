@@ -1,0 +1,62 @@
+<div class="comtainer">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+          <h2 class="text-center text-danger mt-5">Admin Signup</h2>
+          <form [formGroup]="adminregister">
+            <div class="row">
+              <div class="col-md-4">
+                  <img src="https://cdni.iconscout.com/illustration/premium/thumb/admin-login-5146573-4297423.png" alt="loginimg">
+           
+              </div>
+              <div class="col-md-4">
+                  <input
+                  formControlName="userid"
+                  name="userid"
+                  type="text"
+                  class="mt-5 form-control"
+                  placeholder="enter the valid ID "
+                  required
+                />
+                <input
+                type="text"
+                formControlName="username"
+                  name="username"
+                class="mt-5 form-control"
+                placeholder="enter the username"
+                required
+              />
+                <input
+                  type="password"
+                  formControlName="psw"
+                  name="psw"
+                  class="mt-5 form-control"
+                  placeholder="Enter the password"
+                  required
+                />
+                <input
+                type="password"
+                formControlName="cpsw"
+                name="cpsw"
+                class="mt-5 form-control"
+                placeholder="confirm password"
+                required
+              />
+                <button (click)="register()" type="button" class="btn btn-success form-control" style="margin-top: 20%;">SignUp</button>
+                <p class="mt-5 text-danger"><B>already have account Login here</B></p>
+                <a routerLink="/adminlogin" class="btn btn-warning">Login</a>
+  
+  
+              </div>
+           
+          
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <img style="height: 700px;" src="https://static.vecteezy.com/system/resources/thumbnails/004/579/026/small_2x/login-account-with-password-and-unlock-security-free-vector.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  

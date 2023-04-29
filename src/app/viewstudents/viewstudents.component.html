@@ -1,0 +1,48 @@
+<div class="container">
+    <!-- HTML Template -->
+    <div class="row">
+
+<div class="col-lg-12">
+    <table class="table table-bordered table-hover shadow-lg p-3 mb-5 bg-body-tertiary rounded  ">
+        <thead class="thead-dark">
+          <tr >
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">COURSE</th>
+            <th scope="col">GENDER</th>
+            <th scope="col">ACTION</th>
+
+            <!-- <th scope="col"></th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of students">
+            <th scope="row">{{data.userid}}</th>
+            <td>{{data.username}}</td>
+            <td>{{data.course}}</td>
+            <td>{{data.value}}</td>
+            <!-- <td>USA</td> -->
+            <td><button class="btn btn-danger" (click)="delete(data.userid)">send with TC</button></td>
+          </tr>
+          
+          
+        </tbody>
+      </table>
+      
+
+
+
+</div>
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+

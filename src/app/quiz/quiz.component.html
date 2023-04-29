@@ -1,0 +1,33 @@
+<!-- quiz.component.html -->
+
+<div class="container" *ngIf="!quizCompleted">
+    <h2>Question {{ currentQuestionIndex + 1 }}:</h2>
+    <p>{{ questions[currentQuestionIndex].question }}</p>
+    <ul>
+      <li *ngFor="let option of questions[currentQuestionIndex].options" 
+          [ngClass]="{ 'selected': option === selectedOption }" 
+          (click)="selectOption(option)">
+        {{ option }}
+      </li>
+    </ul>
+    <button (click)="submitAnswer()">Submit</button>
+    <p class="score">Score: {{ score }}</p>
+  </div>
+  
+  <div class="container" *ngIf="quizCompleted">
+    <h2>Congratulations! You have completed the quiz.</h2>
+    <p>Final Score: {{ score }}</p>
+    <form [formGroup]="resultgroup">
+
+        <label for="">enter your user id</label>
+        <input type="number" name="userid" formControlName="userid" placeholder="enter your user id">
+        <input name="result" [(ngModel)]="result" type="number" value="{{score}}" disabled>
+        
+        <button type="submit" (click)="fscore()" class="btn btn-primary">Submit</button>
+
+
+
+    </form>
+   
+  </div>
+  

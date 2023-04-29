@@ -1,0 +1,16 @@
+.navbar{
+    background-color: #1a85d1;
+}
+a{
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+a:hover{
+    color: rgb(145, 255, 0);
+
+}
+img{
+    width: 100%;
+    border-radius: 100%;
+}
